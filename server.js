@@ -54,9 +54,10 @@ app.use((req, res) =>{
     res.json("404");
 })
 
-/*app.listen("3000", () => {*/
+app.listen("3000", () => {
     console.log("conexion existosa");
 
 });
+
 
 
