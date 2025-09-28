@@ -5,8 +5,6 @@ const fileupload = require('express-fileupload')
 //firebase
 var admin = require("firebase-admin");
 
-var serviceAccount = require("./clave.json");
-
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
 });
@@ -57,4 +55,5 @@ app.use((req, res) =>{
 
 app.listen("3000", () => {
     console.log("conexion existosa");
+
 });
