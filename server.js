@@ -3,15 +3,6 @@ const  path = require('path');
 const fileupload = require('express-fileupload')
 const port = process.env.PORT || 3000 
 
-//firebase
-var admin = require("firebase-admin");
-
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
-});
-
-let db = admin.firebase();
-
 //
 let initial_path = path.join(__dirname, "public");
 
@@ -58,6 +49,7 @@ app.listen("3000", () => {
     console.log("conexion existosa");
 
 });
+
 
 
 
