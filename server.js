@@ -1,6 +1,7 @@
 const express = require('express');
 const  path = require('path');
 const fileupload = require('express-fileupload')
+const port = process.env.PORT || 4000 
 
 //firebase
 var admin = require("firebase-admin");
@@ -53,7 +54,8 @@ app.use((req, res) =>{
     res.json("404");
 })
 
-app.listen("3000", () => {
+/*app.listen("3000", () => {*/
     console.log("conexion existosa");
 
 });
+
