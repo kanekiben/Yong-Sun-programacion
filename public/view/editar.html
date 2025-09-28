@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editor de blog</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/editar.css">
+</head>
+
+<body>
+
+  <div class="banner">
+    <input type="file" accept="image/*" id="banner-upload" hidden>
+    <label for="banner-upload" class="baner_upload_btn"><img src="" alt="upload baner">upload baner</label>
+  </div>
+
+  <div class="blog">
+    <textarea type="text" class="title" placeholder="blog titulo"></textarea>
+    <textarea type="text" class="article" placeholder="articulo"></textarea>
+  </div>
+
+  <div class="blog_option">
+    <button class="btn dart publish-btn">publicar</button>
+    <input type="file" accept="image/*" id="image-upload" hidden>
+    <label for="image-upload" class="btn grye upload_btn">descargar</label>
+  </div>
+   
+
+   <script type="module" src="https://www.gstatic.com/firebasejs/12.3.0/firebase-app-compat.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/12.3.0/firebase-auth-compat.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore-compat.js"></script>
+    <script type="module" src="/public/js/firebase.js"></script>
+    <script type="module" src="/public/js/editar.js"></script>
+    <script src="/server.js"></script>
+</body>
+
+</html>

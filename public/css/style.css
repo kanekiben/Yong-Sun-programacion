@@ -1,0 +1,392 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  font-family: 'poppins', sans-serif;
+}
+
+::selection{
+  background: #000000;
+  color: #fff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: var(--padding-container);
+}
+
+
+.menu {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/*barra del menu*/
+.menu {
+  padding: 0;
+  display: flex;
+  background-color: azure;
+}
+
+.nav_logox {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+.logo {
+    font-family: "Rubik Gemstones", system-ui;
+  font-weight: 4000;
+  font-style: normal;
+}
+
+
+.nav_logo {
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+}
+
+.nav_link {
+  display: flex;
+}
+
+.nav_link {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.nav_menu,
+.nav_salir {
+  display: contents;
+}
+
+.nav_lis {
+  padding: 10px;
+  padding-right: 10px;
+  display: inline-flex;
+}
+
+.nav_a {
+  display: contents;
+  color: black;
+}
+
+/* vista pricipal*/
+
+.lololo {
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  max-height: 800px;
+  position: relative;
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  color: #000000;
+}
+
+.lololo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../img/img.png');
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+  z-index: -1;
+}
+
+.ggg {
+  margin: auto;
+  padding: 280px 0;
+  align-items: center;
+  color: rgb(248, 245, 241);
+}
+
+.gg {
+  margin: auto;
+  padding: 0;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+}
+
+/*estilo de area de blogs*/
+.blogs-section{
+  width: 100%;
+  padding: 10px ;
+  display: grid;
+  grid-template-columns: repeat(3,2fr);
+  grid-gap: 10px; 
+}
+
+.blog-card{
+  width:auto;
+  height: auto;
+  margin-bottom: 20px;
+  background-color: rgb(232, 233, 233);
+  border-radius: 10px;
+}
+
+.blog-image{
+  width: 100%;
+  height: 250px;
+  align-items: center;
+  object-fit: cover;;
+  border-radius: 10px;
+  margin-bottom:5px;
+}
+
+.blog-overview{
+  margin: 10px;
+  line-height: 20px;
+}
+
+.btn.dark{
+  background: #000000;
+  color: #fff;
+}
+
+/*cambios de imange xd*/
+
+.testimonio {
+  width: 1000px;
+  margin: auto;
+  background-color: #b4b4b9;
+  display: flex;
+  border-radius: 30px;
+}
+
+
+.testimonio_container {
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+  gap: 5em;
+  align-items: center;
+}
+
+.cambio {
+  display: grid;
+  grid-template-columns: 200px max-content;
+  justify-content: center;
+  align-items: center;
+  gap: 6em;
+  grid-column: 2/2;
+  grid-row: 1/2;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cambio--show {
+  pointer-events: unset;
+  opacity: 1;
+  transition: opacity 1.5s ease-in-out;
+}
+
+
+.clases {
+  width: 250px;
+  height: 300px;
+  border-radius: 20%;
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+
+.testimonio_p {
+  max-width: 400px;
+}
+
+
+.lolo {
+  display: flex;
+  color: #fff;
+  display: inline-block;
+  padding: 5px;
+}
+
+.nav_arow {
+  width: 90%;
+  cursor: pointer;
+}
+
+
+@media (max-width:800px) {
+  .nav_img {
+    display: block;
+  }
+
+  .menu {
+    padding: 0;
+    display: flex;
+    background-color: azure;
+  }
+
+  .nav_logox {
+    display: flex;
+    font-size: 15px;
+  }
+
+  .nav_logo {
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+  }
+
+  .nav_link {
+    display: flex;
+  }
+
+  .nav_lis {
+    padding: 3px;
+    padding-right: 10px;
+    display: inline-flex;
+  }
+
+  .nav_menu {
+    align-items: center;
+    display: flex;
+    position: relative;
+    top: 0;
+    right: 10px;
+    padding: 0px;
+  }
+
+  .nav_a--menu {
+    margin-top: 0%;
+    position: absolute;
+    background-color: #eceaea;
+    top: 0;
+    right: 0;
+    height: auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: .7s opacity;
+  }
+
+  .nav_a--show {
+    --show: block;
+    opacity: 1;
+    pointer-events: unset;
+  }
+
+  .nav_salir {
+    display: flex;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 30px;
+    cursor: pointer;
+  }
+
+  .ggg{
+    align-items: center;
+    justify-items: center;
+  }
+
+  .testimonio {
+    width: auto;
+    margin: auto;
+    background-color: #b4b4b9;
+    display: flex;
+    border-radius: 30px;
+  }
+
+  .container{
+    margin: 10px;
+  }
+
+  .testimonio_container {
+    display: grid;
+    grid-template-columns: 20px 1fr 50px;
+    gap: 5em;
+    align-items: center;
+  }
+
+  .cambio {
+    display: grid;
+    grid-template-columns: auto max-content;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    grid-column: 2/2;
+    grid-row: 1/2;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .cambio--show {
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+  }
+
+  .hh{
+    margin: auto;
+    padding: auto;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .clases {
+    width: auto;
+    height: auto;
+    border-radius: 20%;
+    object-fit: cover;
+    object-position: 50% 30%;
+  }
+
+  .testimonio_p {
+    max-width: 400px;
+  }
+
+  .p{
+    font-family: "Tangerine", cursive;
+  font-weight: 400;
+  font-style: normal;
+  }
+
+
+  .lolo{
+    font-family: "Alkatra", system-ui;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  }
+
+  .lolo {
+    display: flex;
+    color: #fff;
+    display: inline-block;
+    padding: 5px;
+  }
+
+  .nav_arow {
+    width: 25px;
+    height: 25px;
+    padding: auto;
+    cursor: pointer;
+  }
+
+}
